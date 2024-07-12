@@ -5,7 +5,7 @@ import { SendFormMessage } from './components/SendFormMessage';
 
 
 function App() {
-  const { info, messages, handleUserMessage } = useModalLLM();
+  const { info,loading, disabled, messages, handleUserMessage } = useModalLLM();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleUserMessage(e);
@@ -15,11 +15,12 @@ function App() {
     <>
       <div>
         <p>{info}</p>
+        <p>{loading && 'loading...'}</p>
         <h1 className='title'>AI Chatbot</h1>
       </div>
       <div className='main'>
         <MessagesList messages={messages} />
-        <SendFormMessage handleSubmit={handleSubmit} />
+        <SendFormMessage handleSubmit={handleSubmit} disabled={disabled} />
       </div>
     </>
 

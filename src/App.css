@@ -12,12 +12,13 @@
 }
 .boxForm {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   width: 700px;
   max-width: 100%;
   form {
     display: flex;
     gap: 30px;
+    padding: 0 10px;
   }
   input {
     flex-grow: 1;
@@ -27,12 +28,16 @@
     outline: none;
   }
   button {
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
   }
 }
 .boxUserMessage{
@@ -48,4 +53,12 @@
     background-color: #007bff;
     color: #fff;
   }
+}
+.messageList{ 
+  margin: 0 10px;
+  
+}
+span{
+  font-weight: 400;
+  line-height: 1.5;
 }

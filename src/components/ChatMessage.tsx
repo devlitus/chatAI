@@ -1,4 +1,3 @@
-
 import '../App.css'
 type ChatMessageProps = {
   messages: {
@@ -10,10 +9,12 @@ type ChatMessageProps = {
 export function ChatMessage({ messages }: ChatMessageProps) {
   const { content } = messages;
   return (
-      <span className="boxAssistantMessage">
-        {content}
-      </span>
 
-    
+    <span>
+      {content}
+    </span>
+
+
+
   )
 }
