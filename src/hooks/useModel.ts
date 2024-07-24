@@ -2,7 +2,7 @@ import { ChatCompletionMessageParam, CreateWebWorkerMLCEngine, WebWorkerMLCEngin
 import { useState, useEffect } from "react";
 
 export function useModalLLM() {
-  const selectedModel = 'Llama-3-8B-Instruct-q4f32_1-MLC';
+  const selectedModel = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k';
   const [info, setInfo] = useState<string>("");
   const [config, setConfig] = useState<WebWorkerMLCEngine>();
   const [messages, setMessages] = useState<{ role: string, content: string }[]>([]);
